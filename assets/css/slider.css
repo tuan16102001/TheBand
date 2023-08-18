@@ -1,0 +1,177 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+
+}
+
+#header {
+  height: 46px;  
+  background-color: #000;
+  position: fixed;
+  /* top: 0; nó bám dính lên trên */
+  top: 0;
+  left: 0;
+  right: 0; 
+
+}
+
+
+/* cái ni là thu nhỏ nav chiếm chiều ngang của header  */
+/* này là của phần search icon */
+#nav{
+  display: inline-block;
+} 
+
+
+#nav, .subnav {
+  /* mất đi dấu chấm trong ul */
+  list-style-type: none;
+}
+
+/* chỉ cấp 1,cấp 2 không bị ảnh hưởng */
+#nav > li{
+  display: inline-block; 
+} 
+
+#nav li {
+  /*  display: inline-block là trên 1 hàng ngang */
+  /* display: inline-block;  */
+  position: relative;
+}
+
+
+#nav > li > a{
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a{
+
+/* text-decoration: none bỏ chữ gạch ngang đi */
+text-decoration: none;
+line-height: 46px;
+padding: 0 24px;
+/* display: inline-block;  */
+/* có block ni 3 phần tử trong More mới phủ hết hover */
+display: block; 
+}
+
+/* cái ni là di chuột vào more nó hiện ra 3 cái phần tử con  */
+  #nav li:hover .subnav{
+    /* phải có block nói mới hiện phần tử */
+  display: block;
+} 
+
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+  color: #333;
+  background-color: #ccc;
+}
+/* thêm hover để di chuột vào nó hiện màu lên */
+/* #nav  li:hover a{
+  color: #333;
+  background-color: #ccc;
+}  */
+
+#nav .subnav {
+  display: none; 
+  position: absolute;
+  min-width: 160%;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  /*box-shadow thêm lớp bóng vào phần tử*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a{
+  color: #000;
+  padding: 0 12px;
+  line-height: 38px;
+}
+
+
+
+/* css cho icon ti-angle-arrow */
+#nav .nav-arrow-down{
+  font-size: 14px;
+}
+
+/* cho float :right để cho nút search lên bên phải trên phần header */
+#header .search-btn {
+  float: right;
+  padding: 0 21px;
+}
+
+
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+
+#header .search-icon{
+  color:#fff ;
+  font-size: 20px;
+  line-height: 46px;
+}
+
+
+
+
+
+
+
+
+#slider {
+  position: relative;
+  /* thêm margin top để nó cách ra khỏi header*/
+   margin-top: 46px; 
+   /* nó là chiều ngang %2 */
+   padding-top: 50%;
+   background: url('../img/slider/slider1.jpg') top center / cover no-repeat;   
+   /* background: url('/assets/img/slider/slider1.jpg') top center /cover no-repeat; */
+   
+}
+
+#slider .text-content{
+  position: absolute;
+  bottom: 47px;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; 
+ 
+}
+#slider .text-heading{
+  font-weight: 500; 
+  font-size: 24px;
+}
+#slider .text-description{
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+
+
+#content {
+    height: 1000px;
+    background-color: #ccc;
+}
+
+#footer {
+    
+}
+
+
+
